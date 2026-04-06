@@ -1,0 +1,10 @@
+const CACHE = 'gnoke-logbook-v1';
+const ASSETS = [
+  './', './index.html', './main/',
+  './js/state.js','./js/theme.js','./js/ui.js',
+  './js/db.js','./js/export.js','./js/app.js',
+  './manifest.json',
+];
+self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))); });
+self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))); });
+self.addEventListener('fetch', e => { e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))); });
