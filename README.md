@@ -4,6 +4,8 @@ Log daily tasks, track progress, and export clean weekly reports — built for i
 
 > **Portable. Private. Persistent.**
 
+👉 Less stress. Less repetition. Faster reporting.
+
 ---
 
 ## Live Demo
@@ -78,4 +80,3 @@ If this app saves you time, consider buying me a coffee:
 ---
 
 © 2026 Edmund Sparrow — Gnoke Suite
-
